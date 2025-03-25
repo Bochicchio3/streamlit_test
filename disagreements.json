@@ -1,0 +1,17 @@
+[
+  {
+    "Title": "Femoropopliteal Drug-coated Balloon Angioplasty: Long-term Results of the Randomized EffPac Trial.",
+    "Abstract": NaN,
+    "Human_Result": "Included",
+    "LLM_Result": "Double_Check",
+    "Disagreement_Summary": "Human marked as Included, but LLM marked as Double_Check. Reason given by LLM: Abstract content is missing (\"nan\"), preventing assessment of study design, intervention, population, or follow-up criteria."
+  },
+  {
+    "Title": "Femoropopliteal Drug-coated Balloon Angioplasty: Long-term Results of the Randomized EffPac Trial.",
+    "Abstract": NaN,
+    "Human_Result": "Included",
+    "LLM_Result": "Double_Check",
+    "Disagreement_Summary": "Human: Included, LLM: Double_Check, Reason: Abstract is empty (\"nan\"). Unable to assess study design, intervention, or population. Requires verification of data integrity or retrieval of the correct abstract.",
+    "LLM_Reasoning": "The abstract provided is labeled as \"nan,\" which typically indicates a missing or undefined value. Without any textual content, it is impossible to determine whether the study meets the inclusion criteria (e.g., study design, intervention comparison, or population focus). The absence of key details precludes proper evaluation against both inclusion and exclusion criteria."
+  }
+]
