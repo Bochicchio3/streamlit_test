@@ -26,17 +26,21 @@ for idx, ticket in enumerate(tickets, 1):
 
         st.session_state['comments'][idx] = comment
 
-# Save comments button
-if st.button("💾 Save all comments"):
-    comments_df = pd.DataFrame([
-        {
-            "Title": t["Title"],
-            "Human_Result": t["Human_Result"],
-            "LLM_Result": t["LLM_Result"],
-            "Disagreement_Summary": t["Disagreement_Summary"],
-            "Comment": st.session_state['comments'].get(idx + 1, "")
-        } for idx, t in enumerate(tickets)
-    ])
+# Create JSON version of the comments
+comments_json = [
+    {
+        "Title": t["Title"],
+        "Human_Result": t["Human_Result"],
+        "LLM_Result": t["LLM_Result"],
+        "Disagreement_Summary": t["Disagreement_Summary"],
+        "Comment": st.session_state['comments'].get(idx + 1, "")
+    } for idx, t in enumerate(tickets)
+]
 
-    comments_df.to_csv("ticket_comments.csv", index=False)
-    st.success("✅ Comments saved successfully!")
+# Add download button
+st.download_button(
+    label="⬇️ Download Comments as JSON",
+    data=json.dumps(comments_json, indent=2),
+    file_name="ticket_comments.json",
+    mime="application/json"
+)
